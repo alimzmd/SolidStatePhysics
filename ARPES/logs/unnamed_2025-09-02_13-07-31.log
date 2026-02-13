@@ -1,0 +1,54 @@
+# IPython log file
+
+import numpy as np
+import matplotlib.pyplot as plt
+from arpes.io import example_data
+import arpes as arp
+
+bi2se3_cut = example_data.cut # <- here, take `cut` above
+                              # any of `map`, `photon_energy`,
+                              # `nano_xps`, or
+                              # `temperature_dependence` will work
+bi2se3_cut
+# just transpose to a more natural axis order with `.T` and plot
+bi2se3_cut.spectrum.T.plot()
+bi2se3_map = example_data.map # <- here, take `cut` above
+bi2se3_map
+# just transpose to a more natural axis order with `.T` and plot
+bi2se3_map.spectrum.T.plot()
+bi2se3_photon_energy= example_data.photon_energy
+bi2se3_photon_energy
+# just transpose to a more natural axis order with `.T` and plot
+bi2se3_photon_energy.spectrum.T.plot()
+bi2se3_xps= example_data.nano_xps
+bi2se3_xps
+# just transpose to a more natural axis order with `.T` and plot
+bi2se3_xps.spectrum.T.plot()
+bi2se3_temperature= example_data.temperature_dependence
+bi2se3_temperature
+# just transpose to a more natural axis order with `.T` and plot
+bi2se3_temperature.spectrum.T.plot()
+# just transpose to a more natural axis order with `.T` and plot
+get_ipython().run_line_magic('matplotlib', 'inline')
+bi2se3_cut.spectrum.T.plot()
+plt.savefig("1")
+import pprint
+
+# Look at help information for the library function `pprint.pprint`
+get_ipython().run_line_magic('pinfo', 'pprint.pprint')
+from arpes.io import load_example_data
+
+# Let's look at the full source code for `load_example_data`
+get_ipython().run_line_magic('pinfo2', 'load_example_data')
+print(load_example_data)
+from arpes.io import example_data
+data1 = example_data.cut
+data1.S.plot()
+f.spectrum
+data1.spectrum
+f.sel(eV=slice(-0.2, 0)).S.plot()
+data1.sel(eV=slice(-0.2, 0)).S.plot()
+data1.sel(eV=slice(-0.2, 0), phi=slice(0.25, 0.45)).S.plot()
+data1.sel(eV=slice(-0.2, 0), .S.plot()
+data1.sel(eV=slice(-0.2, 0) .S.plot()
+data1.sel(eV=slice(-0.2, 0)).S.plot()

@@ -1,0 +1,104 @@
+# IPython log file
+
+import arpes
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
+from arpes.utilities.bz import orthorhombic_cell, hex_cell_2d
+from arpes.plotting.brillouin import bz_plot
+
+# Create a figure with two subplots side-by-side
+fig = plt.figure(figsize=(10, 5))
+
+# Add the first subplot for the 3D plot
+ax3d = fig.add_subplot(1, 2, 1, projection='3d')
+
+# Add the second subplot for the 2D plot
+ax = fig.add_subplot(1, 2, 2)
+
+# Plot the 3D orthorhombic cell Brillouin zone
+bz_plot(
+    cell=orthorhombic_cell(a=1, b=2, c=2), 
+    paths='all', 
+    linewidth=2, 
+    ax=ax3d,
+    offset={'K': (-0.02, 0.02)}
+)
+
+# Plot the 2D hexagonal cell Brillouin zone
+bz_plot(
+    cell=hex_cell_2d(a=1), 
+    paths='GK', 
+    linewidth=2, 
+    repeat=(2, 2), 
+    ax=ax
+)
+
+# Display the final plot
+plt.show()
+import matplotlib.pyplot as plt
+from arpes.utilities.bz import orthorhombic_cell, hex_cell_2d
+#from arpes.plotting.brillouin import bz_plot
+
+# Create a figure with two subplots side-by-side
+fig = plt.figure(figsize=(10, 5))
+
+# Add the first subplot for the 3D plot
+ax3d = fig.add_subplot(1, 2, 1, projection='3d')
+
+# Add the second subplot for the 2D plot
+ax = fig.add_subplot(1, 2, 2)
+
+# Plot the 3D orthorhombic cell Brillouin zone
+bz_plot(
+    cell=orthorhombic_cell(a=1, b=2, c=2), 
+    paths='all', 
+    linewidth=2, 
+    ax=ax3d,
+    offset={'K': (-0.02, 0.02)}
+)
+
+# Plot the 2D hexagonal cell Brillouin zone
+bz_plot(
+    cell=hex_cell_2d(a=1), 
+    paths='GK', 
+    linewidth=2, 
+    repeat=(2, 2), 
+    ax=ax
+)
+
+# Display the final plot
+plt.show()
+import matplotlib.pyplot as plt
+from arpes.utilities.bz import orthorhombic_cell, hex_cell_2d
+from arpes.plotting.bz import bz_plot
+
+# Create a figure with two subplots side-by-side
+fig = plt.figure(figsize=(10, 5))
+
+# Add the first subplot for the 3D plot
+ax3d = fig.add_subplot(1, 2, 1, projection='3d')
+
+# Add the second subplot for the 2D plot
+ax = fig.add_subplot(1, 2, 2)
+
+# Plot the 3D orthorhombic cell Brillouin zone
+bz_plot(
+    cell=orthorhombic_cell(a=1, b=2, c=2), 
+    paths='all', 
+    linewidth=2, 
+    ax=ax3d,
+    offset={'K': (-0.02, 0.02)}
+)
+
+# Plot the 2D hexagonal cell Brillouin zone
+bz_plot(
+    cell=hex_cell_2d(a=1), 
+    paths='GK', 
+    linewidth=2, 
+    repeat=(2, 2), 
+    ax=ax
+)
+
+# Display the final plot
+plt.show()

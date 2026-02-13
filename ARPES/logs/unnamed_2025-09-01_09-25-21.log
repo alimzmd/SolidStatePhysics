@@ -1,0 +1,9 @@
+# IPython log file
+
+from arpes.io import example_data
+
+bi2se3_cut = example_data.cut # <- here, take `cut` above
+                              # any of `map`, `photon_energy`,
+                              # `nano_xps`, or
+                              # `temperature_dependence` will work
+bi2se3_cut
